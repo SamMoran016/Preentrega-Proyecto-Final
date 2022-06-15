@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-image: linear-gradient(to bottom, rgb(192, 135, 170), rgb(235, 177, 213));
+    color: black;
+}
+
+
+
+
+.contenidocarrusel {
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.carousel-.h5 a {
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+
+
+    body {
+        background-color: rgb(200, 159, 163);
+    }
+
+
+    .contenedor {
+        width: 100%;
+        display: grid;
+        grid-gap: 20px;
+
+        grid-template-areas: "header"
+            "contenido"
+            "sidebar"
+            "footer";
+
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+
+    .contenedor>div,
+    .contenedor .header,
+    .contenedor .contenido,
+
+    .contenedor .footer {
+        background-color: rgb(195, 176, 172);
+
+
+    }
+
+    .contenedor .header {
+        grid-area: header;
+
+        background-color: rgb(200, 159, 163);
+        justify-self: center;
+
+
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-between;
+
+    }
+
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    li {
+        padding: 0 15px;
+    }
+
+    .contenedor .contenido {
+        grid-area: contenido;
+
+
+
+    }
+
+
+    .contenedor .footer {
+
+        grid-area: footer;
+        background-color: rgb(108, 83, 78);
+        justify-self: center;
+        text-align: center;
+
+
+    }
+
+    @media screen and (max-width: 320px) {
+        .body {
+            background-color: brown;
+        }
+
+    }
+
+    .contenedor {
+        width: 100%;
+
+
+        display: grid;
+        grid-gap: 1rem;
+
+        grid-template-areas: "header"
+            "contenido"
+            "sidebar"
+            "footer";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .contenedor .footer {
+
+        grid-area: footer;
+        background-color: rgb(108, 83, 78);
+        justify-self: center;
+        text-align: center;
+    }
+
+    .contenido>h1 {
+        color: rgb(30, 2, 56);
+
+    }
+
+    .contenido>p {
+        font-size: 2rem;
+    }
+
+
+    .body {
+        background-image: linear-gradient(to bottom, rgb(196, 107, 174), rgb(235, 123, 192));
+    }
+
+
+
+
+
+    .contenidocarrusel {
+        width: 100%;
+    }
+
+}
